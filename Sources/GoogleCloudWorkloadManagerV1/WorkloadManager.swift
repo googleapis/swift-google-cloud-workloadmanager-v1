@@ -46,7 +46,7 @@ public class WorkloadManagerClient: Clients.WorkloadManagerProtocol {
   /// @Snippet(path: "WorkloadManager_ListEvaluations")
   public func listEvaluations(
     request: ListEvaluationsRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudWorkloadmanagerV1.ListEvaluationsResponse {
+  ) async throws -> GoogleCloudWorkloadManagerV1.ListEvaluationsResponse {
     try await self.inner.listEvaluations(request: request, options: options)
   }
 
@@ -57,7 +57,7 @@ public class WorkloadManagerClient: Clients.WorkloadManagerProtocol {
     byItem: ListEvaluationsRequest, options: GoogleCloudGax.RequestOptions
   ) throws -> any AsyncSequence<Evaluation, Swift.Error> {
     let listRpc = {
-      (token: Swift.String) async throws -> GoogleCloudWorkloadmanagerV1.ListEvaluationsResponse in
+      (token: Swift.String) async throws -> GoogleCloudWorkloadManagerV1.ListEvaluationsResponse in
       var request = byItem
       request.pageToken = token
       return try await self.listEvaluations(request: request, options: options)
@@ -70,7 +70,7 @@ public class WorkloadManagerClient: Clients.WorkloadManagerProtocol {
   /// @Snippet(path: "WorkloadManager_GetEvaluation")
   public func getEvaluation(
     request: GetEvaluationRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudWorkloadmanagerV1.Evaluation {
+  ) async throws -> GoogleCloudWorkloadManagerV1.Evaluation {
     try await self.inner.getEvaluation(request: request, options: options)
   }
 
@@ -260,7 +260,7 @@ public class WorkloadManagerClient: Clients.WorkloadManagerProtocol {
   /// @Snippet(path: "WorkloadManager_ListExecutions")
   public func listExecutions(
     request: ListExecutionsRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudWorkloadmanagerV1.ListExecutionsResponse {
+  ) async throws -> GoogleCloudWorkloadManagerV1.ListExecutionsResponse {
     try await self.inner.listExecutions(request: request, options: options)
   }
 
@@ -271,7 +271,7 @@ public class WorkloadManagerClient: Clients.WorkloadManagerProtocol {
     byItem: ListExecutionsRequest, options: GoogleCloudGax.RequestOptions
   ) throws -> any AsyncSequence<Execution, Swift.Error> {
     let listRpc = {
-      (token: Swift.String) async throws -> GoogleCloudWorkloadmanagerV1.ListExecutionsResponse in
+      (token: Swift.String) async throws -> GoogleCloudWorkloadManagerV1.ListExecutionsResponse in
       var request = byItem
       request.pageToken = token
       return try await self.listExecutions(request: request, options: options)
@@ -284,7 +284,7 @@ public class WorkloadManagerClient: Clients.WorkloadManagerProtocol {
   /// @Snippet(path: "WorkloadManager_GetExecution")
   public func getExecution(
     request: GetExecutionRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudWorkloadmanagerV1.Execution {
+  ) async throws -> GoogleCloudWorkloadManagerV1.Execution {
     try await self.inner.getExecution(request: request, options: options)
   }
 
@@ -411,7 +411,7 @@ public class WorkloadManagerClient: Clients.WorkloadManagerProtocol {
   /// @Snippet(path: "WorkloadManager_ListExecutionResults")
   public func listExecutionResults(
     request: ListExecutionResultsRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudWorkloadmanagerV1.ListExecutionResultsResponse {
+  ) async throws -> GoogleCloudWorkloadManagerV1.ListExecutionResultsResponse {
     try await self.inner.listExecutionResults(request: request, options: options)
   }
 
@@ -423,7 +423,7 @@ public class WorkloadManagerClient: Clients.WorkloadManagerProtocol {
   ) throws -> any AsyncSequence<ExecutionResult, Swift.Error> {
     let listRpc = {
       (token: Swift.String) async throws
-        -> GoogleCloudWorkloadmanagerV1.ListExecutionResultsResponse in
+        -> GoogleCloudWorkloadManagerV1.ListExecutionResultsResponse in
       var request = byItem
       request.pageToken = token
       return try await self.listExecutionResults(request: request, options: options)
@@ -436,7 +436,7 @@ public class WorkloadManagerClient: Clients.WorkloadManagerProtocol {
   /// @Snippet(path: "WorkloadManager_ListRules")
   public func listRules(
     request: ListRulesRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudWorkloadmanagerV1.ListRulesResponse {
+  ) async throws -> GoogleCloudWorkloadManagerV1.ListRulesResponse {
     try await self.inner.listRules(request: request, options: options)
   }
 
@@ -445,7 +445,7 @@ public class WorkloadManagerClient: Clients.WorkloadManagerProtocol {
   /// @Snippet(path: "WorkloadManager_ListScannedResources")
   public func listScannedResources(
     request: ListScannedResourcesRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudWorkloadmanagerV1.ListScannedResourcesResponse {
+  ) async throws -> GoogleCloudWorkloadManagerV1.ListScannedResourcesResponse {
     try await self.inner.listScannedResources(request: request, options: options)
   }
 
@@ -457,7 +457,7 @@ public class WorkloadManagerClient: Clients.WorkloadManagerProtocol {
   ) throws -> any AsyncSequence<ScannedResource, Swift.Error> {
     let listRpc = {
       (token: Swift.String) async throws
-        -> GoogleCloudWorkloadmanagerV1.ListScannedResourcesResponse in
+        -> GoogleCloudWorkloadManagerV1.ListScannedResourcesResponse in
       var request = byItem
       request.pageToken = token
       return try await self.listScannedResources(request: request, options: options)
@@ -583,7 +583,7 @@ extension Clients {
   public protocol WorkloadManagerProtocol {
     /// See `WorkloadManagerClient.listEvaluations`.
     func listEvaluations(request: ListEvaluationsRequest) async throws
-      -> GoogleCloudWorkloadmanagerV1.ListEvaluationsResponse
+      -> GoogleCloudWorkloadManagerV1.ListEvaluationsResponse
 
     /// See `WorkloadManagerClient.listEvaluations`.
     func listEvaluations(
@@ -597,12 +597,12 @@ extension Clients {
 
     /// See `WorkloadManagerClient.getEvaluation`.
     func getEvaluation(request: GetEvaluationRequest) async throws
-      -> GoogleCloudWorkloadmanagerV1.Evaluation
+      -> GoogleCloudWorkloadManagerV1.Evaluation
 
     /// See `WorkloadManagerClient.getEvaluation`.
     func getEvaluation(
       name: Swift.String,
-    ) async throws -> GoogleCloudWorkloadmanagerV1.Evaluation
+    ) async throws -> GoogleCloudWorkloadManagerV1.Evaluation
 
     /// See `WorkloadManagerClient.createEvaluation`.
     func createEvaluation(request: CreateEvaluationRequest) async throws
@@ -648,7 +648,7 @@ extension Clients {
 
     /// See `WorkloadManagerClient.listExecutions`.
     func listExecutions(request: ListExecutionsRequest) async throws
-      -> GoogleCloudWorkloadmanagerV1.ListExecutionsResponse
+      -> GoogleCloudWorkloadManagerV1.ListExecutionsResponse
 
     /// See `WorkloadManagerClient.listExecutions`.
     func listExecutions(
@@ -662,12 +662,12 @@ extension Clients {
 
     /// See `WorkloadManagerClient.getExecution`.
     func getExecution(request: GetExecutionRequest) async throws
-      -> GoogleCloudWorkloadmanagerV1.Execution
+      -> GoogleCloudWorkloadManagerV1.Execution
 
     /// See `WorkloadManagerClient.getExecution`.
     func getExecution(
       name: Swift.String,
-    ) async throws -> GoogleCloudWorkloadmanagerV1.Execution
+    ) async throws -> GoogleCloudWorkloadManagerV1.Execution
 
     /// See `WorkloadManagerClient.runEvaluation`.
     func runEvaluation(request: RunEvaluationRequest) async throws -> GoogleLongrunning.Operation
@@ -698,7 +698,7 @@ extension Clients {
 
     /// See `WorkloadManagerClient.listExecutionResults`.
     func listExecutionResults(request: ListExecutionResultsRequest) async throws
-      -> GoogleCloudWorkloadmanagerV1.ListExecutionResultsResponse
+      -> GoogleCloudWorkloadManagerV1.ListExecutionResultsResponse
 
     /// See `WorkloadManagerClient.listExecutionResults`.
     func listExecutionResults(
@@ -712,16 +712,16 @@ extension Clients {
 
     /// See `WorkloadManagerClient.listRules`.
     func listRules(request: ListRulesRequest) async throws
-      -> GoogleCloudWorkloadmanagerV1.ListRulesResponse
+      -> GoogleCloudWorkloadManagerV1.ListRulesResponse
 
     /// See `WorkloadManagerClient.listRules`.
     func listRules(
       parent: Swift.String,
-    ) async throws -> GoogleCloudWorkloadmanagerV1.ListRulesResponse
+    ) async throws -> GoogleCloudWorkloadManagerV1.ListRulesResponse
 
     /// See `WorkloadManagerClient.listScannedResources`.
     func listScannedResources(request: ListScannedResourcesRequest) async throws
-      -> GoogleCloudWorkloadmanagerV1.ListScannedResourcesResponse
+      -> GoogleCloudWorkloadManagerV1.ListScannedResourcesResponse
 
     /// See `WorkloadManagerClient.listScannedResources`.
     func listScannedResources(
@@ -780,7 +780,7 @@ extension Clients {
     /// See `WorkloadManagerClient.listEvaluations`.
     func listEvaluations(
       request: ListEvaluationsRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudWorkloadmanagerV1.ListEvaluationsResponse
+    ) async throws -> GoogleCloudWorkloadManagerV1.ListEvaluationsResponse
 
     /// See `WorkloadManagerClient.listEvaluations`.
     func listEvaluations(
@@ -790,7 +790,7 @@ extension Clients {
     /// See `WorkloadManagerClient.getEvaluation`.
     func getEvaluation(
       request: GetEvaluationRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudWorkloadmanagerV1.Evaluation
+    ) async throws -> GoogleCloudWorkloadManagerV1.Evaluation
 
     /// See `WorkloadManagerClient.createEvaluation`.
     func createEvaluation(
@@ -825,7 +825,7 @@ extension Clients {
     /// See `WorkloadManagerClient.listExecutions`.
     func listExecutions(
       request: ListExecutionsRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudWorkloadmanagerV1.ListExecutionsResponse
+    ) async throws -> GoogleCloudWorkloadManagerV1.ListExecutionsResponse
 
     /// See `WorkloadManagerClient.listExecutions`.
     func listExecutions(
@@ -835,7 +835,7 @@ extension Clients {
     /// See `WorkloadManagerClient.getExecution`.
     func getExecution(
       request: GetExecutionRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudWorkloadmanagerV1.Execution
+    ) async throws -> GoogleCloudWorkloadManagerV1.Execution
 
     /// See `WorkloadManagerClient.runEvaluation`.
     func runEvaluation(
@@ -860,7 +860,7 @@ extension Clients {
     /// See `WorkloadManagerClient.listExecutionResults`.
     func listExecutionResults(
       request: ListExecutionResultsRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudWorkloadmanagerV1.ListExecutionResultsResponse
+    ) async throws -> GoogleCloudWorkloadManagerV1.ListExecutionResultsResponse
 
     /// See `WorkloadManagerClient.listExecutionResults`.
     func listExecutionResults(
@@ -870,12 +870,12 @@ extension Clients {
     /// See `WorkloadManagerClient.listRules`.
     func listRules(
       request: ListRulesRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudWorkloadmanagerV1.ListRulesResponse
+    ) async throws -> GoogleCloudWorkloadManagerV1.ListRulesResponse
 
     /// See `WorkloadManagerClient.listScannedResources`.
     func listScannedResources(
       request: ListScannedResourcesRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudWorkloadmanagerV1.ListScannedResourcesResponse
+    ) async throws -> GoogleCloudWorkloadManagerV1.ListScannedResourcesResponse
 
     /// See `WorkloadManagerClient.listScannedResources`.
     func listScannedResources(
@@ -922,14 +922,14 @@ extension Clients {
 // Default implementations
 extension Clients.WorkloadManagerProtocol {
   public func listEvaluations(request: ListEvaluationsRequest) async throws
-    -> GoogleCloudWorkloadmanagerV1.ListEvaluationsResponse
+    -> GoogleCloudWorkloadManagerV1.ListEvaluationsResponse
   {
     try await self.listEvaluations(request: request, options: .init())
   }
 
   public func listEvaluations(
     request: ListEvaluationsRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudWorkloadmanagerV1.ListEvaluationsResponse {
+  ) async throws -> GoogleCloudWorkloadManagerV1.ListEvaluationsResponse {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
@@ -943,7 +943,7 @@ extension Clients.WorkloadManagerProtocol {
     byItem: ListEvaluationsRequest, options: GoogleCloudGax.RequestOptions
   ) throws -> any AsyncSequence<Evaluation, Swift.Error> {
     let listRpc = {
-      (token: Swift.String) async throws -> GoogleCloudWorkloadmanagerV1.ListEvaluationsResponse in
+      (token: Swift.String) async throws -> GoogleCloudWorkloadManagerV1.ListEvaluationsResponse in
       throw GoogleCloudGax.RequestError.unimplemented
     }
     return GoogleCloudGax.PaginatedResponseSequence(listRpc: listRpc)
@@ -959,20 +959,20 @@ extension Clients.WorkloadManagerProtocol {
   }
 
   public func getEvaluation(request: GetEvaluationRequest) async throws
-    -> GoogleCloudWorkloadmanagerV1.Evaluation
+    -> GoogleCloudWorkloadManagerV1.Evaluation
   {
     try await self.getEvaluation(request: request, options: .init())
   }
 
   public func getEvaluation(
     request: GetEvaluationRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudWorkloadmanagerV1.Evaluation {
+  ) async throws -> GoogleCloudWorkloadManagerV1.Evaluation {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
   public func getEvaluation(
     name: Swift.String,
-  ) async throws -> GoogleCloudWorkloadmanagerV1.Evaluation {
+  ) async throws -> GoogleCloudWorkloadManagerV1.Evaluation {
     let request = GetEvaluationRequest().with {
       $0.name = name
     }
@@ -1097,14 +1097,14 @@ extension Clients.WorkloadManagerProtocol {
   }
 
   public func listExecutions(request: ListExecutionsRequest) async throws
-    -> GoogleCloudWorkloadmanagerV1.ListExecutionsResponse
+    -> GoogleCloudWorkloadManagerV1.ListExecutionsResponse
   {
     try await self.listExecutions(request: request, options: .init())
   }
 
   public func listExecutions(
     request: ListExecutionsRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudWorkloadmanagerV1.ListExecutionsResponse {
+  ) async throws -> GoogleCloudWorkloadManagerV1.ListExecutionsResponse {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
@@ -1118,7 +1118,7 @@ extension Clients.WorkloadManagerProtocol {
     byItem: ListExecutionsRequest, options: GoogleCloudGax.RequestOptions
   ) throws -> any AsyncSequence<Execution, Swift.Error> {
     let listRpc = {
-      (token: Swift.String) async throws -> GoogleCloudWorkloadmanagerV1.ListExecutionsResponse in
+      (token: Swift.String) async throws -> GoogleCloudWorkloadManagerV1.ListExecutionsResponse in
       throw GoogleCloudGax.RequestError.unimplemented
     }
     return GoogleCloudGax.PaginatedResponseSequence(listRpc: listRpc)
@@ -1134,20 +1134,20 @@ extension Clients.WorkloadManagerProtocol {
   }
 
   public func getExecution(request: GetExecutionRequest) async throws
-    -> GoogleCloudWorkloadmanagerV1.Execution
+    -> GoogleCloudWorkloadManagerV1.Execution
   {
     try await self.getExecution(request: request, options: .init())
   }
 
   public func getExecution(
     request: GetExecutionRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudWorkloadmanagerV1.Execution {
+  ) async throws -> GoogleCloudWorkloadManagerV1.Execution {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
   public func getExecution(
     name: Swift.String,
-  ) async throws -> GoogleCloudWorkloadmanagerV1.Execution {
+  ) async throws -> GoogleCloudWorkloadManagerV1.Execution {
     let request = GetExecutionRequest().with {
       $0.name = name
     }
@@ -1233,14 +1233,14 @@ extension Clients.WorkloadManagerProtocol {
   }
 
   public func listExecutionResults(request: ListExecutionResultsRequest) async throws
-    -> GoogleCloudWorkloadmanagerV1.ListExecutionResultsResponse
+    -> GoogleCloudWorkloadManagerV1.ListExecutionResultsResponse
   {
     try await self.listExecutionResults(request: request, options: .init())
   }
 
   public func listExecutionResults(
     request: ListExecutionResultsRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudWorkloadmanagerV1.ListExecutionResultsResponse {
+  ) async throws -> GoogleCloudWorkloadManagerV1.ListExecutionResultsResponse {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
@@ -1255,7 +1255,7 @@ extension Clients.WorkloadManagerProtocol {
   ) throws -> any AsyncSequence<ExecutionResult, Swift.Error> {
     let listRpc = {
       (token: Swift.String) async throws
-        -> GoogleCloudWorkloadmanagerV1.ListExecutionResultsResponse in
+        -> GoogleCloudWorkloadManagerV1.ListExecutionResultsResponse in
       throw GoogleCloudGax.RequestError.unimplemented
     }
     return GoogleCloudGax.PaginatedResponseSequence(listRpc: listRpc)
@@ -1271,20 +1271,20 @@ extension Clients.WorkloadManagerProtocol {
   }
 
   public func listRules(request: ListRulesRequest) async throws
-    -> GoogleCloudWorkloadmanagerV1.ListRulesResponse
+    -> GoogleCloudWorkloadManagerV1.ListRulesResponse
   {
     try await self.listRules(request: request, options: .init())
   }
 
   public func listRules(
     request: ListRulesRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudWorkloadmanagerV1.ListRulesResponse {
+  ) async throws -> GoogleCloudWorkloadManagerV1.ListRulesResponse {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
   public func listRules(
     parent: Swift.String,
-  ) async throws -> GoogleCloudWorkloadmanagerV1.ListRulesResponse {
+  ) async throws -> GoogleCloudWorkloadManagerV1.ListRulesResponse {
     let request = ListRulesRequest().with {
       $0.parent = parent
     }
@@ -1292,14 +1292,14 @@ extension Clients.WorkloadManagerProtocol {
   }
 
   public func listScannedResources(request: ListScannedResourcesRequest) async throws
-    -> GoogleCloudWorkloadmanagerV1.ListScannedResourcesResponse
+    -> GoogleCloudWorkloadManagerV1.ListScannedResourcesResponse
   {
     try await self.listScannedResources(request: request, options: .init())
   }
 
   public func listScannedResources(
     request: ListScannedResourcesRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudWorkloadmanagerV1.ListScannedResourcesResponse {
+  ) async throws -> GoogleCloudWorkloadManagerV1.ListScannedResourcesResponse {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
@@ -1314,7 +1314,7 @@ extension Clients.WorkloadManagerProtocol {
   ) throws -> any AsyncSequence<ScannedResource, Swift.Error> {
     let listRpc = {
       (token: Swift.String) async throws
-        -> GoogleCloudWorkloadmanagerV1.ListScannedResourcesResponse in
+        -> GoogleCloudWorkloadManagerV1.ListScannedResourcesResponse in
       throw GoogleCloudGax.RequestError.unimplemented
     }
     return GoogleCloudGax.PaginatedResponseSequence(listRpc: listRpc)

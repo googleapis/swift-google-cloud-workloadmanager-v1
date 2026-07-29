@@ -53,14 +53,14 @@ extension Clients {
 
     public func listEvaluations(
       request: ListEvaluationsRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudWorkloadmanagerV1.ListEvaluationsResponse {
+    ) async throws -> GoogleCloudWorkloadManagerV1.ListEvaluationsResponse {
       try await self._intercept(
         request: request,
         options: options,
         idempotent: true,
         action: {
           (r: ListEvaluationsRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleCloudWorkloadmanagerV1.ListEvaluationsResponse
+            -> GoogleCloudWorkloadManagerV1.ListEvaluationsResponse
           in
           return try await self.inner.listEvaluations(request: r, options: o)
         })
@@ -68,14 +68,14 @@ extension Clients {
 
     public func getEvaluation(
       request: GetEvaluationRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudWorkloadmanagerV1.Evaluation {
+    ) async throws -> GoogleCloudWorkloadManagerV1.Evaluation {
       try await self._intercept(
         request: request,
         options: options,
         idempotent: true,
         action: {
           (r: GetEvaluationRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleCloudWorkloadmanagerV1.Evaluation
+            -> GoogleCloudWorkloadManagerV1.Evaluation
           in
           return try await self.inner.getEvaluation(request: r, options: o)
         })
@@ -128,14 +128,14 @@ extension Clients {
 
     public func listExecutions(
       request: ListExecutionsRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudWorkloadmanagerV1.ListExecutionsResponse {
+    ) async throws -> GoogleCloudWorkloadManagerV1.ListExecutionsResponse {
       try await self._intercept(
         request: request,
         options: options,
         idempotent: true,
         action: {
           (r: ListExecutionsRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleCloudWorkloadmanagerV1.ListExecutionsResponse
+            -> GoogleCloudWorkloadManagerV1.ListExecutionsResponse
           in
           return try await self.inner.listExecutions(request: r, options: o)
         })
@@ -143,14 +143,14 @@ extension Clients {
 
     public func getExecution(
       request: GetExecutionRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudWorkloadmanagerV1.Execution {
+    ) async throws -> GoogleCloudWorkloadManagerV1.Execution {
       try await self._intercept(
         request: request,
         options: options,
         idempotent: true,
         action: {
           (r: GetExecutionRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleCloudWorkloadmanagerV1.Execution
+            -> GoogleCloudWorkloadManagerV1.Execution
           in
           return try await self.inner.getExecution(request: r, options: o)
         })
@@ -188,14 +188,14 @@ extension Clients {
 
     public func listExecutionResults(
       request: ListExecutionResultsRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudWorkloadmanagerV1.ListExecutionResultsResponse {
+    ) async throws -> GoogleCloudWorkloadManagerV1.ListExecutionResultsResponse {
       try await self._intercept(
         request: request,
         options: options,
         idempotent: true,
         action: {
           (r: ListExecutionResultsRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleCloudWorkloadmanagerV1.ListExecutionResultsResponse
+            -> GoogleCloudWorkloadManagerV1.ListExecutionResultsResponse
           in
           return try await self.inner.listExecutionResults(request: r, options: o)
         })
@@ -203,14 +203,14 @@ extension Clients {
 
     public func listRules(
       request: ListRulesRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudWorkloadmanagerV1.ListRulesResponse {
+    ) async throws -> GoogleCloudWorkloadManagerV1.ListRulesResponse {
       try await self._intercept(
         request: request,
         options: options,
         idempotent: true,
         action: {
           (r: ListRulesRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleCloudWorkloadmanagerV1.ListRulesResponse
+            -> GoogleCloudWorkloadManagerV1.ListRulesResponse
           in
           return try await self.inner.listRules(request: r, options: o)
         })
@@ -218,14 +218,14 @@ extension Clients {
 
     public func listScannedResources(
       request: ListScannedResourcesRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudWorkloadmanagerV1.ListScannedResourcesResponse {
+    ) async throws -> GoogleCloudWorkloadManagerV1.ListScannedResourcesResponse {
       try await self._intercept(
         request: request,
         options: options,
         idempotent: true,
         action: {
           (r: ListScannedResourcesRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleCloudWorkloadmanagerV1.ListScannedResourcesResponse
+            -> GoogleCloudWorkloadManagerV1.ListScannedResourcesResponse
           in
           return try await self.inner.listScannedResources(request: r, options: o)
         })
